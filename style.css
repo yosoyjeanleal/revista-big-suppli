@@ -1,0 +1,430 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  margin-top: 60px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
+}
+
+h1, h2, h3 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+h1 {
+  color: #020e2a;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+h2 {
+  color: #ff0062f4;
+  font-size: 2rem;
+}
+
+p {
+  color: gray;
+}
+
+strong {
+  color: #ff0062f4;
+}
+
+.navbar {
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 16px 64px;
+background-color: #020e2a;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1000;
+border-bottom-left-radius: 0; /* Radio de la esquina inferior izquierda */
+border-bottom-right-radius: 0;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  transition: transform 0.2s ease;
+  align-items: start;
+}
+
+.navbar-link {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  transition: all 0.5 ease;
+}
+
+.navbar-link li {
+  margin-left: 24px;
+}
+
+.navbar-link a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 17px;
+  padding: 8px 24px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column; 
+  cursor: pointer;
+  margin-left: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.menu-icon .line {
+  width: 30px;
+  height: 3px;
+  background-color: #FFFFFF;
+  margin: 5px;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+#menu-responsive{
+  display: none;
+}
+
+@media(max-width: 768px){
+  .navbar{
+    padding: 16px;
+  }
+  .menu-icon{
+    display: flex;
+  }
+
+.navbar-link{
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  flex-direction: column;
+  background-color: #2980b9;
+  text-align: center;
+  transition: heigth 0.5s ease;
+}
+.navbar-link li{
+
+  margin: 0;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.navbar-link a{
+  font-size: 20px;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+#menu-responsive:checked + .menu-icon + .navbar-link {
+  height: 100vh;
+}
+
+  #menu-responsive:checked + .menu-icon .line:nth-child(1){
+
+    transform: rotate(45deg) translate(15px, 3px);
+  }
+  #menu-responsive:checked + .menu-icon .line:nth-child(2){
+
+    transform: scale(0);
+  }
+  #menu-responsive:checked + .menu-icon .line:nth-child(3){
+
+    transform: rotate(-45deg) translate(15px, -4px);
+  }
+}
+
+.magazine {
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-magazine {
+  justify-content: center;
+  text-align: center;
+  width: 700px;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Aseguramos que en móviles la imagen esté arriba */
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  border: 1px solid #ddd;
+}
+
+
+.content-magazine {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.content-magazine h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #020e2a;
+  text-align: center;
+}
+
+.content-magazine p {
+  font-size: 18px;
+  color: gray;
+  text-align: justify;
+}
+
+.content-magazine li {
+  font-size: 14px;
+  text-align: justify;
+  list-style: none;
+  margin-bottom: 15px; /* Espaciado entre elementos */
+  padding: 10px;
+  background-color: #ffffff; /* Fondo blanco */
+  border-left: 4px solid #020e2a; /* Línea decorativa en la izquierda */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilo de imagenes*/
+
+.image-magazine1 {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.content-image1 {
+  max-width: 50%;
+  height: auto;
+  width: 45%;
+}
+
+.image-magazine2 { 
+  float: left;
+  margin-right: 20px; 
+  margin-bottom: 20px; 
+  display: flex; 
+  flex-direction: column; 
+  width: 50%;
+} 
+.tituloh2 h2{
+  text-align: right;
+  margin-right: 10px;
+  margin-top: -55%;
+  padding: 40px;
+}
+.contenido h3{
+  display: flex;
+  text-align: justify;
+  margin-left: 55%;
+}
+.contenido p{
+  display: flex;
+  text-align: justify;
+  font-size: 25px;
+  padding: 20px;
+}
+.content-image2 { 
+    max-width: 100%; 
+    height: auto; 
+  } 
+
+.image-magazine3 {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+.content-image3 {
+  padding: 20px;
+  max-width: 100%;
+  height: auto;
+  }
+
+  .image-magazine4 {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+.content-image4 {
+  padding: 20px;
+  max-width: 100%;
+  height: auto;
+  }
+
+  .magazine-cover {
+    padding: 20px;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+    text-align: center;
+    width: 700px;
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Aseguramos que en móviles la imagen esté arriba */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    border: 1px solid #ddd;
+  }
+
+  .front-page {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .navigation-buttons {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Espacia los botones */
+    margin: 20px 0; /* Espaciado superior e inferior */
+  }
+  
+  .nav-button {
+    display: inline-block;
+    background-color: #007BFF; /* Color de fondo */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño del texto */
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-button:hover {
+    background-color: #0056b3; /* Cambia el color al pasar el cursor */
+  }
+
+
+/* Diseño Responsivo*/
+@media (max-width: 768px) {
+  .page-magazine {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .page-magazine {
+    width: 100%;
+    height: auto;
+  }
+
+  .page-magazine .image-magazine {
+    height: 180px; /* Ajustamos la imagen a un tamaño más pequeño en pantallas muy pequeñas */
+  }
+
+  .content-magazine h3 {
+    font-size: 1.2rem;
+  }
+
+  .content-magazine p {
+    font-size: 0.9rem;
+}
+}
+/* === Footer === */
+footer {
+  background-color: #020e2a; /* Color de fondo oscuro */
+  color: white;
+  padding: 20px 40px; /* Menos padding para hacer el footer más compacto */
+  margin-top: 20px;
+  border-top: 3px solid #ff0062f4; /* Línea naranja */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alinea todo al centro */
+  justify-content: center; /* Centra el contenido verticalmente */
+  width: 100%;
+}
+
+footer .footer-info {
+  font-family: sans-serif;
+  margin-bottom: 20px;
+}
+
+footer .footer-info h4 {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+footer .footer-info p {
+  font-size: 12px;
+  margin: 5px 0;
+  color: #ffffff;
+}
+
+footer .footer-info p i {
+  margin-right: 5px;
+}
+
+footer .social-media {
+  display: flex;
+  gap: 15px;
+  justify-content: center; /* Centra las redes sociales horizontalmente */
+  margin-bottom: 20px;
+}
+
+footer .social-media a {
+  color: white;
+  font-size: 18px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .social-media a:hover {
+  transform: scale(1.2);
+  color: #F4991c;
+}
+
+footer .copy {
+  font-size: 14px; /* Aumenta el tamaño del texto */
+  color: #fdfdfd; /* Resalta el texto con un color contrastante */
+  text-align: center; /* Asegura que el texto esté centrado */
+  width: 100%;
+  padding-top: 15px;
+  border-top: 2px solid #ff0062f4; /* Línea sutil para separar */
+  margin-top: 20px;
+}
+
+/* Medias queries para responsividad */
+@media (max-width: 768px) {
+  .producto {
+      flex: 1 1 calc(50% - 20px);
+  }
+}
+@media (max-width: 480px) {
+  .producto {
+      flex: 1 1 100%;
+  }
+}
